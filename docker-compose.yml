@@ -16,6 +16,9 @@ services:
       - local
 
   portainer:
+    build:
+        context: .
+        dockerfile: ./Docker_portainer
     image: portainer/portainer
     restart: always
     container_name: "portainer-app"
